@@ -1,0 +1,176 @@
+09:59:18.434 [main] INFO  i.g.c.config.GatlingConfiguration$ - Gatling will try to load 'gatling.conf' config file as ClassLoader resource.
+09:59:18.985 [GatlingSystem-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+09:59:19.908 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  i.g.c.stats.writer.ConsoleDataWriter - Initializing
+09:59:19.908 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  i.g.c.stats.writer.LogFileDataWriter - Initializing
+09:59:19.927 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  i.g.c.stats.writer.LogFileDataWriter - Initialized
+09:59:19.928 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  i.g.c.stats.writer.ConsoleDataWriter - Initialized
+09:59:20.985 [gatling-1-1] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:59:22.209 [GatlingSystem-akka.actor.default-dispatcher-8] INFO  com.intuit.karate - karate.env system property was: null 
+09:59:22.224 [GatlingSystem-akka.actor.default-dispatcher-8] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+09:59:22.464 [GatlingSystem-akka.actor.default-dispatcher-8] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 59
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"karate@learn.com","password":"12345678"}}
+
+09:59:23.241 [GatlingSystem-akka.actor.default-dispatcher-8] DEBUG com.intuit.karate - response time in milliseconds: 774
+1 < 200
+1 < Date: Tue, 25 Apr 2023 12:58:30 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"155-HyvXs/ahSBpbfVoOAuMZldi+6FQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LcnCq0tosWZkxocr49Y82P1DL4onNgUnKwI82NipXOHNEU5oYv7xDqh%2BPZY%2FoVW12Qw8jnkraLvBnjqrE2A6WsBAhmK0myiwrh5aPm6u1IVay7RZw3JMzilOHSJTz7YvM9PE"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7bd6c20089431ac3-GRU
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"user":{"email":"karate@learn.com","username":"KarateLearn","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBsZWFybi5jb20iLCJ1c2VybmFtZSI6IkthcmF0ZUxlYXJuIiwiaWF0IjoxNjgyNDI3NTEwLCJleHAiOjE2ODc2MTE1MTB9.pVIAkts_aVahmFES2oxRfed19wvFbZsqKX97qqjnoyo"}}
+
+09:59:23.254 [GatlingSystem-akka.actor.default-dispatcher-8] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+09:59:23.423 [GatlingSystem-akka.actor.default-dispatcher-8] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBsZWFybi5jb20iLCJ1c2VybmFtZSI6IkthcmF0ZUxlYXJuIiwiaWF0IjoxNjgyNDI3NTEwLCJleHAiOjE2ODc2MTE1MTB9.pVIAkts_aVahmFES2oxRfed19wvFbZsqKX97qqjnoyo
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 102
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"title1","description":"description1","body":"The North remembers."}}
+
+09:59:23.968 [gatling-1-2] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:59:23.988 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  com.intuit.karate - karate.env system property was: null 
+09:59:24.019 [GatlingSystem-akka.actor.default-dispatcher-7] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBsZWFybi5jb20iLCJ1c2VybmFtZSI6IkthcmF0ZUxlYXJuIiwiaWF0IjoxNjgyNDI3NTEwLCJleHAiOjE2ODc2MTE1MTB9.pVIAkts_aVahmFES2oxRfed19wvFbZsqKX97qqjnoyo
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 163
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"title2","description":"description2","body":"And I have a tender spot in my heart for cripples and bastards and broken things."}}
+
+09:59:24.037 [GatlingSystem-akka.actor.default-dispatcher-8] DEBUG com.intuit.karate - response time in milliseconds: 611
+1 < 200
+1 < Date: Tue, 25 Apr 2023 12:58:31 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"16d-meszCuCKodPs7xF26MTQbIJR0wM"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=v42G5Sromnw8bswxQxTBhgBc62tX7c7WFgEAdkm5XS%2BHjb06iKfiF0GWK8PcslL1WBPCzZCrvY7of72azYuXJkVKcxVPVCVO0MU5qzAmhI7%2FoKHTjZ2aCJOVCYr232Eo8EqH"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7bd6c20568d21abf-GRU
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"article":{"slug":"title1-167389","title":"title1","description":"description1","body":"The North remembers.","tagList":[],"createdAt":"2023-04-25T12:58:30.922Z","updatedAt":"2023-04-25T12:58:30.922Z","favorited":false,"favoritesCount":0,"author":{"username":"KarateLearn","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+09:59:24.516 [GatlingSystem-akka.actor.default-dispatcher-7] DEBUG com.intuit.karate - response time in milliseconds: 494
+1 < 200
+1 < Date: Tue, 25 Apr 2023 12:58:31 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1aa-rsElyTYqQjjoMlKz5jBVBW9KZvE"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bkgb2vukqSlyED8V%2Be2i%2FCwhFAJ%2BgBXjDtsVGFi4Ex8NPsnCMVOoPzFHRzY7pLslgFQi8Fv8rastDpGatjj47RKqGwZfSCbcibAqZsISYXw3DntpBcDhH360wa1Se4A4aVSq"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7bd6c20929291aab-GRU
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"article":{"slug":"title2-167389","title":"title2","description":"description2","body":"And I have a tender spot in my heart for cripples and bastards and broken things.","tagList":[],"createdAt":"2023-04-25T12:58:31.417Z","updatedAt":"2023-04-25T12:58:31.417Z","favorited":false,"favoritesCount":0,"author":{"username":"KarateLearn","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+09:59:24.942 [GatlingSystem-akka.actor.default-dispatcher-8] INFO  i.g.core.controller.inject.Injector - Scenario Create and delete article has finished injecting
+09:59:24.944 [GatlingSystem-akka.actor.default-dispatcher-8] INFO  i.g.core.controller.inject.Injector - Injecting is done
+09:59:24.954 [gatling-1-3] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:59:24.978 [GatlingSystem-akka.actor.default-dispatcher-9] INFO  com.intuit.karate - karate.env system property was: null 
+09:59:25.009 [GatlingSystem-akka.actor.default-dispatcher-9] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBsZWFybi5jb20iLCJ1c2VybmFtZSI6IkthcmF0ZUxlYXJuIiwiaWF0IjoxNjgyNDI3NTEwLCJleHAiOjE2ODc2MTE1MTB9.pVIAkts_aVahmFES2oxRfed19wvFbZsqKX97qqjnoyo
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 107
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"title3","description":"description3","body":"Do the dead frighten you?"}}
+
+09:59:25.484 [GatlingSystem-akka.actor.default-dispatcher-9] DEBUG com.intuit.karate - response time in milliseconds: 473
+1 < 200
+1 < Date: Tue, 25 Apr 2023 12:58:32 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"172-Pmhjrlex5vlUpYLJDREpTPc3OzY"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kclapI%2BitSNr03NqFl2TEHLdtaZODFinNvO7Ll8pK2d7bKdC3gVdj5wrQUbocz8n5K8JUWycqqJx4fQ%2BU%2F5PLUbxBgcPOcPc62CH5G9VoltIeD%2Bl6qOHKn9gfFuM1JnpPhpt"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7bd6c20f2d3f1ab5-GRU
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"article":{"slug":"title3-167389","title":"title3","description":"description3","body":"Do the dead frighten you?","tagList":[],"createdAt":"2023-04-25T12:58:32.388Z","updatedAt":"2023-04-25T12:58:32.388Z","favorited":false,"favoritesCount":0,"author":{"username":"KarateLearn","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+09:59:26.004 [gatling-1-4] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:59:26.022 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  com.intuit.karate - karate.env system property was: null 
+09:59:26.049 [GatlingSystem-akka.actor.default-dispatcher-7] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmF0ZUBsZWFybi5jb20iLCJ1c2VybmFtZSI6IkthcmF0ZUxlYXJuIiwiaWF0IjoxNjgyNDI3NTEwLCJleHAiOjE2ODc2MTE1MTB9.pVIAkts_aVahmFES2oxRfed19wvFbZsqKX97qqjnoyo
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 128
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"title1","description":"description1","body":"All dwarfs are bastards in their father's eyes"}}
+
+09:59:26.607 [GatlingSystem-akka.actor.default-dispatcher-7] DEBUG com.intuit.karate - response time in milliseconds: 555
+1 < 422
+1 < Date: Tue, 25 Apr 2023 12:58:33 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 39
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ueTVFI74907COQL3gbprl1Pogj5EV45E7zKFrk6BrQphPJu%2FNoDoOdvGB6Jklxnwxx88z4ViGiHBzeClqDt0tWyeIj2IPF%2FHp%2FC%2FkoTJSSHh3%2FrXhOTlFxiWQa11Rgn3fmTE"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7bd6c2160f601ac0-GRU
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+09:59:26.627 [GatlingSystem-akka.actor.default-dispatcher-7] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 555, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+09:59:26.633 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  i.g.core.controller.inject.Injector - All users of scenario Create and delete article are stopped
+09:59:26.634 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  i.g.core.controller.inject.Injector - Stopping
+09:59:26.635 [GatlingSystem-akka.actor.default-dispatcher-9] INFO  i.gatling.core.controller.Controller - Injector has stopped, initiating graceful stop
+09:59:26.687 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  akka.actor.CoordinatedShutdown - Running CoordinatedShutdown with reason [ActorSystemTerminateReason]
+09:59:26.729 [main] INFO  i.gatling.charts.stats.LogFileReader - Collected List(C:\Users\User\Documents\KarateGit\Udemy\KarateGit\target\gatling\perftest-20230425125919789\simulation.log) from perftest-20230425125919789
+09:59:26.741 [main] INFO  i.gatling.charts.stats.LogFileReader - First pass
+09:59:26.746 [main] INFO  i.gatling.charts.stats.LogFileReader - First pass done: read 14 lines
+09:59:26.757 [main] INFO  i.gatling.charts.stats.LogFileReader - Second pass
+09:59:26.785 [main] INFO  i.gatling.charts.stats.LogFileReader - Second pass: read 14 lines
